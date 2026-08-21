@@ -161,3 +161,111 @@ yêu cầu giữ nguyên prompt, gồm tiếng việt có dấu
 ## 2026-08-21(11:54) Yêu cầu bổ sung cả lịch sử prompt trước đó
 Chi tiết prompt:
 ok, hãy ghi cho cả những nội dung prompt trước đó của tôi nữa
+
+## 2026-08-21(13:27) Yêu cầu xem trước idea cho functional requirement
+Chi tiết prompt:
+bước tiếp theo tôi sẽ làm tiếp governance/03-functional-requirement.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(13:27) Đồng ý triển khai nội dung functional requirement
+Chi tiết prompt:
+tôi ok
+
+## 2026-08-21(00:00) Yêu cầu vẽ sơ đồ use case cho từng function
+Chi tiết prompt:
+tại governance/03-functional-requirement.md
+có thể vẽ sơ đồ usecase cho từng function để dể hình dung ko?
+
+## 2026-08-21(00:00) Xác nhận kiểu vẽ use case như hình minh họa
+Chi tiết prompt:
+vẽ như này đc ko?
+
+## 2026-08-21(00:00) Yêu cầu chuyển sơ đồ use case theo mẫu đã duyệt
+Chi tiết prompt:
+hãy chuyển đi
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho non-functional requirement
+Chi tiết prompt:
+bước tiếp theo  làm tiếp 04-non-functional-requirement.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Đồng ý triển khai nội dung non-functional requirement
+Chi tiết prompt:
+tôi ok 
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho use cases
+Chi tiết prompt:
+bước tiếp theo  làm tiếp governance/05-use-cases.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Đồng ý triển khai use cases và tham khảo functional requirement
+Chi tiết prompt:
+tôi ok 
+hãy tham khảo restaurant-platform-docs\governance\03-functional-requirement.md
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho UI/UX
+Chi tiết prompt:
+bước tiếp theo  làm tiếp governance/06-ui-ux.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Đồng ý triển khai nội dung UI/UX
+Chi tiết prompt:
+tôi ok 
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho architecture
+Chi tiết prompt:
+bước tiếp theo  làm tiếp governance/07-architecture.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho architecture
+Chi tiết prompt:
+bước tiếp theo  làm tiếp governance/07-architecture.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Đồng ý triển khai nội dung architecture
+Chi tiết prompt:
+tôi ok 
+
+## 2026-08-21(00:00) Chuẩn hóa ID toàn hệ thống về bigint
+Chi tiết prompt:
+id kiểu uuid hoặc bigint thống nhất toàn hệ -> hãy sử dụng bigint
+
+## 2026-08-21(00:00) Chuẩn hóa tiền tố tên bảng
+Chi tiết prompt:
+tất cả tên table đều có tiền tố ts(vd: ts_menu_items)
+
+## 2026-08-21(15:06) Đồng ý thực hiện cập nhật database theo chuẩn đã chốt
+Chi tiết prompt:
+ok, hãy thực hiện đi
+
+## 2026-08-21(15:11) Yêu cầu tạo file SQL DDL schema riêng
+Chi tiết prompt:
+tạo luôn bản SQL DDL khởi tạo schema thành 1 file riêng
+
+## 2026-08-21(00:00) Hỏi mức độ đầy đủ của file 09-api.md cho API design
+Chi tiết prompt:
+ý tôi với file 09-api.md hiện tại thì có thể dùng làm bản design cho API đủ chưa?
+
+## 2026-08-21(00:00) Yêu cầu bổ sung file 09-api.md
+Chi tiết prompt:
+ok hãy bổ sung cho tôi
+
+## 2026-08-21(00:00) Yêu cầu xem trước idea cho standards/10-security.md
+Chi tiết prompt:
+chưa cần, hãy tiếp tục làm file tiếp theo restaurant-platform-docs\standards\10-security.md
+hãy cho tôi xem trước idea
+
+## 2026-08-21(00:00) Đồng ý triển khai standards/10-security.md
+Chi tiết prompt:
+ok, hãy thực hiện đi
+
+## 2026-08-21(00:00) Làm rõ điều kiện CI/CD, Docker và hạ tầng deploy DEV
+Chi tiết prompt:
+do tôi chưa có kinh nghiệm nhiều về devops, tôi muốn làm rõ các point sau
+1. tại: 2) CI/CD điều kiện cần có là gì( vd: phải có account Jenkin, cài app gì để config)
+2. tại 3) Docker điều kiện cần có là gì( vd: phải có account Docker, cài app gì để config)
+3. với deploy cho cả 3(1BE, 2FE, 1DB) thì cần có gì? deploy lên DEV thì có host nào free dc ko?
+
+## 2026-08-21(16:00) Yêu cầu tổng hợp hướng dẫn DevOps vào file standards/11-devops.md
+Chi tiết prompt:
+ok, hãy tập hợp các nội dung trên(gồm hướng dẫn, checklist...) và ghi file
