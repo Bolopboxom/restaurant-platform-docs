@@ -28,6 +28,93 @@ Core backend service for business operations.
 - config
 - shared integration clients
 
+## Recommended package structure
+
+```text
+com.restaurantplatform.api
+├── ApiApplication
+├── config
+├── controller
+│   ├── auth
+│   ├── menu
+│   ├── order
+│   └── admin
+├── application
+│   ├── auth
+│   ├── menu
+│   ├── order
+│   └── reporting
+├── domain
+│   ├── model
+│   ├── service
+│   └── repository
+├── infrastructure
+│   ├── persistence
+│   ├── security
+│   └── external
+├── mapper
+└── dto
+```
+
+## Dependency on restaurant-platform-common
+
+### Maven example
+
+```xml
+<dependency>
+	<groupId>com.restaurantplatform</groupId>
+	<artifactId>restaurant-platform-common</artifactId>
+	<version>1.0.0</version>
+</dependency>
+```
+
+### Gradle example
+
+```gradle
+dependencies {
+		implementation 'com.restaurantplatform:restaurant-platform-common:1.0.0'
+}
+```
+
+## Request flow with common library
+
+```text
+Client
+	-> Controller (api)
+	-> Application Service (api)
+	-> Domain Service/Repository (api)
+	-> Database
+	-> ApiResponse/ErrorCode/BaseException (common)
+	-> Client
+```
+
+### Flow details
+1. Controller receives request and performs basic validation.
+2. Application service executes business logic and domain orchestration.
+3. Domain layer persists or loads data via repository.
+4. On success, controller wraps data using common response envelope.
+5. On business error, service throws standardized exception from common.
+6. Global exception handler returns consistent error payload.
+
+## Class placement guide
+
+### Keep in api
+- Controllers for menu/order/payment/admin endpoints.
+- Business services, domain models, repositories, and mappers.
+- Workflow-specific validators and state transition rules.
+
+### Import from common
+- Common response envelope classes.
+- Error code enum and base exception classes.
+- Shared security constants and JWT claim models.
+- Trace and logging helper components.
+
+### Boundary rules
+- api depends on common, but common must never depend on api.
+- Do not duplicate response/error contracts already provided by common.
+- Do not move service-specific business rules into common.
+- Keep modules isolated for future service extraction.
+
 ## Design rules
 
 - Start as a modular monolith.
