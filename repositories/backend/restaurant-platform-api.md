@@ -18,6 +18,19 @@ Core backend service for business operations.
 - Payment management
 - Reporting
 
+## Tech Stack Baseline
+
+- JDK 21
+- Maven
+- Spring Boot 3.3.x
+- PostgreSQL 17
+- Flyway 10.x
+- Kafka 3.x
+- JUnit 5
+- OpenAPI 3 + Swagger UI (Springdoc)
+- Jenkins CI/CD
+- Docker
+
 ## Recommended structure
 
 - api
@@ -76,6 +89,17 @@ dependencies {
 }
 ```
 
+## API Documentation and Contract Source
+
+- Runtime API docs are exposed via Swagger UI and OpenAPI endpoints.
+- OpenAPI document should be treated as implementation contract generated from code.
+- The design-first contract reference remains in `restaurant-platform-docs/api-contracts/09-api.md`.
+
+### Standard endpoints (Springdoc)
+
+- `/v3/api-docs`
+- `/swagger-ui/index.html`
+
 ## Request flow with common library
 
 ```text
@@ -114,6 +138,12 @@ Client
 - Do not duplicate response/error contracts already provided by common.
 - Do not move service-specific business rules into common.
 - Keep modules isolated for future service extraction.
+
+## Testing Baseline for This Repository
+
+- Unit tests use JUnit 5.
+- Integration tests should validate PostgreSQL and Kafka integration paths.
+- CI must run test suites before image build and deployment.
 
 ## Design rules
 

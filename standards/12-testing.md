@@ -7,6 +7,10 @@
 - Utility components.
 - Order status transition logic.
 
+### Framework Baseline
+- Backend unit test framework: JUnit 5.
+- Mocking library can be Mockito-compatible.
+
 ### Coverage Targets
 - Backend core modules (auth/menu/order): minimum 70 percent line coverage.
 - Frontend critical logic (login/menu/order): mandatory component and service tests.
@@ -37,6 +41,8 @@
 - Use dedicated test schema/database.
 - Seed minimum data set for roles, users, menu categories, and menu items.
 - Ensure test isolation and cleanup after each test suite.
+- For backend services with messaging, include Kafka integration test scenarios.
+- Prefer Testcontainers for PostgreSQL 17 and Kafka in CI integration test stage.
 
 ## UAT
 ### Participants

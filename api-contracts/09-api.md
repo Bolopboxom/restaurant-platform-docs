@@ -266,3 +266,8 @@ Error:
 
 ## OpenAPI Export Note
 - Next step for engineering: convert this design into OpenAPI 3.1 YAML for code generation and automated contract testing.
+- Runtime implementation should expose OpenAPI and Swagger UI through Springdoc.
+- Standard endpoints:
+  - `/v3/api-docs`
+  - `/swagger-ui/index.html`
+- For release validation, ensure generated OpenAPI is aligned with this design document.
